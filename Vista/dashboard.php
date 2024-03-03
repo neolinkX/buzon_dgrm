@@ -44,7 +44,7 @@ if (!isset($_SESSION['username'])) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="menus.php">
 						<img src="../images/logo.png" style="max-width:300px; margin-top:-16px; margin-left:-16px;" class="img-thumbnail img-responsive"></a>
                 </a>
             </div>

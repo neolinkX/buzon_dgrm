@@ -34,8 +34,6 @@ function ingresa() {
     xhr.send(params);
 }
 
-
-
 function mostrarError(mensaje) {
     var errorContainer = document.getElementById("errorContainer");
     errorContainer.innerHTML = mensaje;

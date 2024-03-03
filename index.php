@@ -32,14 +32,40 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                        Si eres usuario administrador, ingresa aquí:
-                        <input type="text" class="form-control" id="username" placeholder="Usuario">
-                        <input type="password" class="form-control" id="password" placeholder="Contraseña">
-                    </div>
-                    <button type="button" class="btn btn-default" onclick="ingresa()">Ingresa</button>
-                </form>
+                
+            <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                aria-expanded="false">Busca tu folio<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                            <form id="miFormulario" class="navbar-form" action="Vista/muestra_folio_poblacion.php" target="popup" method="post" onsubmit="window.open('', 'popup', 'width=800,height=200')">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="folio" id="folio" placeholder="Escribe tu folio">
+                                        
+                                    </div>
+                                    <button type="submit" class="btn btn-defaul" >Buscar</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">Si eres usuario administrador, ingresa aquí <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <form class="navbar-form">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="username" placeholder="Usuario">
+                                        <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                                    </div>
+                                    <button type="button" class="btn btn-default" onclick="ingresa()">Ingresa</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                </ul>
 
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
