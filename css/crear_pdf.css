@@ -1,0 +1,5 @@
+body {
+    background-image: url('../css/fondo.png'); /* Ajusta la ruta según tu configuración */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
