@@ -1,23 +1,21 @@
 <?php
 
  class Conect{
-    const servername ="localhost";
-    const username = "root";
-    const password = "";
-    const database = "buzon_dgrm_1897654"; 
+    private static $servername;
+    private static $username;
+    private static $password;
+    private static $database;
 
-    
-    /*
-    const servername ="localhost";
-    const username = "u180558178_nlx_1897654";
-    const password = "ObladiOblada01$.";
-    const database = "u180558178_buzon_dgrm_189";
-    */
 
 function getCon(){
+    self::$servername = getenv('DB_SERVERNAME');
+    self::$username = getenv('DB_USERNAME');
+    self::$password = getenv('DB_PASSWORD');
+    self::$database = getenv('DB_DATABASE');
+
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
         // Create a connection
-        $conn = new mysqli(self::servername, self::username, self::password, self::database);
+        $conn = new mysqli(self::$servername, self::$username, self::$password, self::$database);
 
         // Check the connection
         if ($conn->connect_error) {
